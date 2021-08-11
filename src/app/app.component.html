@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+      <form *ngIf="submitted == false" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
         <div class="row">
           <div class="col-xs-12">
             <h3>Please rate our services</h3>
@@ -47,6 +47,7 @@
           </div>
         </div>
       </form>
+      <app-thanks *ngIf="submitted == true"></app-thanks>
     </div>
   </div>
 </div>

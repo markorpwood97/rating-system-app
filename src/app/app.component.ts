@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   feedbackForm: FormGroup;
   error = new Subject<string>();
   currentRate = 0;   
+  submitted = false;
 
   constructor(private http: HttpClient) {}
   
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
   
   onSubmit() {
     this.saveRating(this.feedbackForm.value['rating'], this.feedbackForm.value['reason']);
+    this.submitted = true;
   };
   
   private saveRating(rating: number, reason: string) {

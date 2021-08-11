@@ -5,10 +5,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThanksComponent } from './thanks/thanks.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ThanksComponent
   ],
   imports: [
     BrowserModule,
